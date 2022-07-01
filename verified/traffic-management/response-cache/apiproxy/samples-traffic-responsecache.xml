@@ -1,2 +1,17 @@
-<APIProxy name="samples-traffic-responsecache">
+<APIProxy revision="1" name="samples-traffic-responsecache">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1656683753135</CreatedAt>
+    <LastModifiedAt>1656683870834</LastModifiedAt>
+    <BasePaths>/apigee-samples/response-cache</BasePaths>
+    <Policies>
+        <Policy>ResponseCache</Policy>
+        <Policy>SetResponseHeaders</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
 </APIProxy>

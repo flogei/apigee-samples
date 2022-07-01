@@ -1,8 +1,13 @@
-<Quota name="EnforceQuota">
-  <DisplayName>Enforce Quota</DisplayName>
-  <FaultRules/>
-  <Properties/>
-  <Interval>1</Interval>
-  <TimeUnit>minute</TimeUnit>
-  <Allow count="1"/>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Quota continueOnError="false" enabled="true" name="EnforceQuota">
+    <DisplayName>EnforceQuota</DisplayName>
+    <Properties/>
+    <Interval>1</Interval>
+    <TimeUnit>minute</TimeUnit>
+    <Allow count="1"/>
+    <Distributed>false</Distributed>
+    <Synchronous>false</Synchronous>
+    <AsynchronousConfiguration>
+        <SyncIntervalInSeconds>10</SyncIntervalInSeconds>
+    </AsynchronousConfiguration>
 </Quota>

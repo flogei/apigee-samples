@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ResponseCache async="false" continueOnError="false" enabled="true" name="ResponseCache">
+<ResponseCache continueOnError="false" enabled="true" name="ResponseCache">
     <DisplayName>ResponseCache</DisplayName>
+    <Properties/>
     <CacheKey>
+        <Prefix/>
         <KeyFragment ref="request.uri" type="string"/>
     </CacheKey>
+    <Scope>Exclusive</Scope>
     <ExpirySettings>
-        <TimeoutInSec>3</TimeoutInSec>
+        <ExpiryDate/>
+        <TimeOfDay/>
+        <TimeoutInSec ref="">5</TimeoutInSec>
     </ExpirySettings>
+    <SkipCacheLookup/>
+    <SkipCachePopulation/>
 </ResponseCache>

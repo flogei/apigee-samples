@@ -1,4 +1,16 @@
-<APIProxy name="samples-traffic-enforce-quota-simple">
-  <!-- This is the root of the application -->
-  <Description>Secure the proxy with an API key.</Description>
+<APIProxy revision="1" name="samples-traffic-enforce-quota-simple">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1656682528771</CreatedAt>
+    <LastModifiedAt>1656683651354</LastModifiedAt>
+    <BasePaths>/apigee-samples/enforce-quota-simple</BasePaths>
+    <Policies>
+        <Policy>EnforceQuota</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
 </APIProxy>
