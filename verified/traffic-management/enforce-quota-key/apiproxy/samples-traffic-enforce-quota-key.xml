@@ -1,0 +1,17 @@
+<APIProxy revision="1" name="samples-traffic-enforce-quota-key">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1656681458498</CreatedAt>
+    <LastModifiedAt>1656681667213</LastModifiedAt>
+    <BasePaths>/apigee-samples/enforce-quota-key</BasePaths>
+    <Policies>
+        <Policy>EnforceQuota</Policy>
+        <Policy>VerifyAPIKey</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

@@ -1,0 +1,6 @@
+<TargetEndpoint name="default">
+    <LocalTargetConnection>
+        <APIProxy>restaurant_locator</APIProxy>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </LocalTargetConnection>
+</TargetEndpoint>

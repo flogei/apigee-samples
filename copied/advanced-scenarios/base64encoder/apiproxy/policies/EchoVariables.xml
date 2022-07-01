@@ -1,0 +1,9 @@
+<AssignMessage name="EchoVariables">
+  <AssignTo createNew="false" type="response"></AssignTo>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <Set>
+    <Headers>
+    <Header name="X-Encoded-Credentials">{encodedAuthHeader}</Header>
+    </Headers>
+  </Set>
+</AssignMessage>
