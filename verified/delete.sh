@@ -20,10 +20,7 @@ echo This script deletes all sample API proxies to your organization on the Apig
 
 echo Deleting all samples in $APIGEE_X_ENV and $APIGEE_X_ORG available under $APIGEE_X_HOSTNAME
 
-#sackmesser clean --googleapi --quiet -t "$APIGEE_TOKEN" -o "$APIGEE_X_ORG" proxy samples-traffic-responsecache 
-#sackmesser clean --googleapi --quiet -t "$APIGEE_TOKEN" -o "$APIGEE_X_ORG" proxy samples-traffic-enforce-quota-simple
-#sackmesser clean --googleapi --quiet -t "$APIGEE_TOKEN" -o "$APIGEE_X_ORG" proxy samples-traffic-enforce-quota-key
-
+# Deleting Traffic Management Samples
 cd traffic-management/
 
 for proxydir in *; do
@@ -39,6 +36,78 @@ for proxydir in *; do
         # --description "See Apigee-samples traffic-management"
     fi
 done
+
+cd ../
+
+# Deleting Security Samples
+cd security/
+
+for proxydir in *; do
+    if [ -d "${proxydir}" ]; then
+        # Delete with Apigeecli
+        echo Deleting Proxy $proxydir
+        # apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-security-$proxydir -v -1
+        apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-security-$proxydir 
+    fi
+done
+
+cd ../
+
+# Deleting Advanced Samples
+cd advanced/
+
+for proxydir in *; do
+    if [ -d "${proxydir}" ]; then
+        # Delete with Apigeecli
+        echo Deleting Proxy $proxydir
+        # apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-advanced-$proxydir -v -1
+        apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-advanced-$proxydir 
+    fi
+done
+
+cd ../
+
+# Deleting Concepts Samples
+cd concepts/
+
+for proxydir in *; do
+    if [ -d "${proxydir}" ]; then
+        # Delete with Apigeecli
+        echo Deleting Proxy $proxydir
+        # apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-concepts-$proxydir -v -1
+        apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-concepts-$proxydir 
+    fi
+done
+
+cd ../
+
+# Deleting Extensions Samples
+cd extensions/
+
+for proxydir in *; do
+    if [ -d "${proxydir}" ]; then
+        # Delete with Apigeecli
+        echo Deleting Proxy $proxydir
+        # apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-extensions-$proxydir -v -1
+        apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-extensions-$proxydir 
+    fi
+done
+
+cd ../
+
+# Deleting Mediation Samples
+cd mediation/
+
+for proxydir in *; do
+    if [ -d "${proxydir}" ]; then
+        # Delete with Apigeecli
+        echo Deleting Proxy $proxydir
+        # apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-mediation-$proxydir -v -1
+        apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-mediation-$proxydir 
+    fi
+done
+
+cd ../
 
 echo "Deleting API Product, Developer and App"
 
