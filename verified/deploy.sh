@@ -90,7 +90,9 @@ set -e
 
 echo This script deploys all sample API proxies to your organization on the Apigee API Platform.
 
-echo Deploying all samples to $APIGEE_X_ENG and $APIGEE_X_ORG available under $APIGEE_X_HOSTNAME
+echo Deploying all samples to $APIGEE_X_ENV and $APIGEE_X_ORG available under $APIGEE_X_HOSTNAME
+
+apiproxyArray=""
 
 cd traffic-management/
 
@@ -98,8 +100,8 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Deploy with Apigeecli
         echo Deploying Proxy $proxydir
-        apigeecli apis create bundle -p $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n $proxydir 
-        
+        apigeecli apis create bundle -p $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-traffic-$proxydir 
+                
         # Deploy with Sackmesser
         # SCRIPTPATH=$( (cd "$(dirname "$0")" && pwd ))
         # sackmesser deploy --googleapi --async -d "$proxydir" -t "$APIGEE_TOKEN" -o "$APIGEE_X_ORG" -e "$APIGEE_X_ENV"  \
@@ -109,9 +111,14 @@ done
 
 cd ../
 
+# removing the last "," from the apiproxyArray
 echo "Deployment complete."
 
 echo "Setting up an API Product, Developer and App"
+
+apigeecli developers create -n "janedoe@gmail.com" -f "Jane" -s "Doe" -u "janedoe"
+apigeecli products create -n "Samples API Product" -m "Samples API Product" -e "$APIGEE_X_ENV" -f auto --opgrp apiproduct.json -t $APIGEE_TOKEN
+apigeecli apps create -e "janedoe@gmail.com" -n "Sample App" -p "Samples API Product" -t $APIGEE_TOKEN
 
 # generate edge.json file
 # generate_edge_json

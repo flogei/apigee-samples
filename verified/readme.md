@@ -13,11 +13,11 @@ For deploying the proxyies run the following command
 export APIGEE_TOKEN=$(gcloud auth print-access-token)
 
 export APIGEE_X_ORG=<my-org>
-export APIGEE_X_ENG=<my-env>
+export APIGEE_X_ENV=<my-env>
 export APIGEE_X_HOSTNAME=<my-hostname>
 
 export APIGEE_X_ORG=bap-emea-apigee-6
-export APIGEE_X_ENG=default-dev
+export APIGEE_X_ENV=default-dev
 export APIGEE_X_HOSTNAME=dev.api.apigee.cloud10x.net
 
 ./deploy.sh

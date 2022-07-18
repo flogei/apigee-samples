@@ -1,0 +1,30 @@
+{
+    "operationConfigs": [
+          {
+            "apiSource": "samples-traffic-response-cache",
+            "operations": [
+              {
+                "resource": "/"
+              }
+            ]
+          },
+          {
+            "apiSource": "samples-traffic-enforce-quota-simple",
+            "operations": [
+              {
+                "resource": "/"
+              }
+            ]
+          },
+          {
+            "apiSource": "samples-traffic-enforce-quota-key",
+            "operations": [
+              {
+                "resource": "/"
+              }
+            ],
+            "quota": {}
+          }
+    ],
+    "operationConfigType": "proxy"
+  }
