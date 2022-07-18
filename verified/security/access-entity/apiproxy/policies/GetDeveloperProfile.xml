@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AccessEntity continueOnError="false" enabled="true" name="GetDeveloperProfile">
+    <DisplayName>GetDeveloperProfile</DisplayName>
+    <Properties/>
+    <EntityIdentifier ref="request.queryparam.apikey" type="consumerkey"/>
+    <EntityType value="developer"/>
+</AccessEntity>

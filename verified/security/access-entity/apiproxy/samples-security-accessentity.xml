@@ -1,0 +1,18 @@
+<APIProxy revision="1" name="samples-security-accessentity">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1658153120559</CreatedAt>
+    <LastModifiedAt>1658153330759</LastModifiedAt>
+    <BasePaths>/apigee-samples/accessentity</BasePaths>
+    <Policies>
+        <Policy>GetDeveloperProfile</Policy>
+        <Policy>SetDeveloperProfile</Policy>
+        <Policy>EchoVariables</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

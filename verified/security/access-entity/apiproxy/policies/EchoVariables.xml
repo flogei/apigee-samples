@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="EchoVariables">
+    <DisplayName>EchoVariables</DisplayName>
+    <Properties/>
+    <AssignTo createNew="false" type="response"/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Set>
+        <Headers>
+            <Header name="X-Developer-email">{developer.email}</Header>
+        </Headers>
+    </Set>
+</AssignMessage>

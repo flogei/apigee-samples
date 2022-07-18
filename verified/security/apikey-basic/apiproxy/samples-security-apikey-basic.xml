@@ -1,0 +1,17 @@
+<APIProxy revision="1" name="samples-security-apikey-basic">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1658152064061</CreatedAt>
+    <LastModifiedAt>1658153002765</LastModifiedAt>
+    <BasePaths>/apigee-samples/apikey-basic</BasePaths>
+    <Policies>
+        <Policy>Verify-API-Key-1</Policy>
+        <Policy>RemoveAPIKey</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

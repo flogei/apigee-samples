@@ -1,0 +1,17 @@
+<APIProxy revision="1" name="samples-security-regex-protection">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1658153613125</CreatedAt>
+    <LastModifiedAt>1658153797873</LastModifiedAt>
+    <BasePaths>/apigee-samples/regex-protection</BasePaths>
+    <Policies>
+        <Policy>RegexProtection</Policy>
+        <Policy>DetectRegexError</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
