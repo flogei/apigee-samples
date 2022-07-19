@@ -1,0 +1,23 @@
+<APIProxy revision="2" name="samples-advanced-js-base64encoder">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1658220412077</CreatedAt>
+    <LastModifiedAt>1658220412077</LastModifiedAt>
+    <BasePaths>/apigee-samples/js-base64encoder</BasePaths>
+    <Policies>
+        <Policy>JS-EncodeAuthHeader</Policy>
+        <Policy>AM-EchoVariables</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://core-min.js</Resource>
+        <Resource>jsc://enc-base64-min.js</Resource>
+        <Resource>jsc://enc-utf16-min.js</Resource>
+        <Resource>jsc://encodeAuthHeader.js</Resource>
+    </Resources>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

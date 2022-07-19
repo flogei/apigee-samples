@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript continueOnError="false" enabled="true" timeLimit="200" name="JS-EncodeAuthHeader">
+    <DisplayName>JS-EncodeAuthHeader</DisplayName>
+    <Properties/>
+    <IncludeURL>jsc://core-min.js</IncludeURL>
+    <IncludeURL>jsc://enc-utf16-min.js</IncludeURL>
+    <IncludeURL>jsc://enc-base64-min.js</IncludeURL>
+    <ResourceURL>jsc://encodeAuthHeader.js</ResourceURL>
+</Javascript>

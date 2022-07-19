@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="Extract Direction Info">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>EV-ExtractDirectionInfo</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AM-AssignDirectionsPayload</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/directions") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="ExtractCompanyId">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>EV-ExtractCompanyId</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AM-AssignCompanyIdPayload</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/companyId") and (request.verb = "POST")</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/apigee-samples/extractxml</BasePath>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

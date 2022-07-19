@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-AssignDirectionsPayload">
+    <DisplayName>AM-AssignDirectionsPayload</DisplayName>
+    <Properties/>
+    <AssignTo createNew="false" type="response"/>
+    <Set>
+        <Payload contentType="application/xml" variablePrefix="{" variableSuffix="}">
+            <root>
+                <status>{direction_info.status}</status>
+                <mode>{direction_info.travelmode}</mode>
+                <duration>{direction_info.duration}</duration>
+                <timeunit>{direction_info.timeunit}</timeunit>
+            </root>
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

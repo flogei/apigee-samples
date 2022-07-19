@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-AssignCustomHeaders">
+    <DisplayName>AM-AssignCustomHeaders</DisplayName>
+    <Properties/>
+    <AssignTo createNew="false" type="response"/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Set>
+        <Headers>
+            <!-- Variables populated by parsing JSON response with an ExtractVariables policy -->
+            <Header name="x-firstName">{mock.firstName}</Header>
+            <Header name="x-lastName">{mock.lastName}</Header>
+        </Headers>
+    </Set>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,14 @@
+<APIProxy revision="1" name="samples-concepts-dynamicrouting">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1658219027374</CreatedAt>
+    <LastModifiedAt>1658219174312</LastModifiedAt>
+    <BasePaths>/apigee-samples/dynamicrouting</BasePaths>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>apigee</TargetEndpoint>
+        <TargetEndpoint>httpbin</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

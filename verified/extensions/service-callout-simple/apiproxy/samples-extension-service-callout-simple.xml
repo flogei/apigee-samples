@@ -1,0 +1,16 @@
+<APIProxy revision="2" name="samples-extension-service-callout-simple">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1658217224886</CreatedAt>
+    <LastModifiedAt>1658217224886</LastModifiedAt>
+    <BasePaths>/apigee-samples/service-callout-simple</BasePaths>
+    <Policies>
+        <Policy>SC-GetMockResponse</Policy>
+        <Policy>AM-BuildRequest</Policy>
+        <Policy>EV-ParseJsonResponse</Policy>
+        <Policy>AM-AssignCustomHeaders</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+</APIProxy>

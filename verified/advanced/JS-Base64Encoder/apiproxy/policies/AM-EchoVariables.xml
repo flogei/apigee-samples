@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-EchoVariables">
+    <DisplayName>AM-EchoVariables</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="X-Encoded-Credentials">{encodedAuthHeader}</Header>
+        </Headers>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

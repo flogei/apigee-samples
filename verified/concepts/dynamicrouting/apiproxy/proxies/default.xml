@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <Flows/>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/apigee-samples/dynamicrouting</BasePath>
+    </HTTPProxyConnection>
+    <RouteRule name="apigeeroute">
+        <Condition>request.queryparam.routeTo = "apigee"</Condition>
+        <TargetEndpoint>apigee</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="httpbinroute">
+        <Condition>request.queryparam.routeTo = "httpbin"</Condition>
+        <TargetEndpoint>httpbin</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="default">
+        <TargetEndpoint>apigee</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

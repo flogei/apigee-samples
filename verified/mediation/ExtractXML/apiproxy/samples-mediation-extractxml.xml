@@ -1,0 +1,16 @@
+<APIProxy revision="2" name="samples-mediation-extractxml">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1658218503059</CreatedAt>
+    <LastModifiedAt>1658218503059</LastModifiedAt>
+    <BasePaths>/apigee-samples/extractxml</BasePaths>
+    <Policies>
+        <Policy>EV-ExtractDirectionInfo</Policy>
+        <Policy>AM-AssignDirectionsPayload</Policy>
+        <Policy>EV-ExtractCompanyId</Policy>
+        <Policy>AM-AssignCompanyIdPayload</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+</APIProxy>
