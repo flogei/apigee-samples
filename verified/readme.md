@@ -22,3 +22,7 @@ export APIGEE_X_HOSTNAME=dev.api.apigee.cloud10x.net
 
 ./deploy.sh
 ```
+
+
+You can use this Postman Collection to make the Demo calls
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6502188-d2534914-0809-4c0f-8a35-77b46bfc71e8?action=collection%2Ffork&collection-url=entityId%3D6502188-d2534914-0809-4c0f-8a35-77b46bfc71e8%26entityType%3Dcollection%26workspaceId%3D5c5b4618-97ff-4263-8887-e0b90a9df6e3)
