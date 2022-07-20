@@ -8,11 +8,12 @@
             <Step>
                 <Name>SetDeveloperProfile</Name>
             </Step>
+        </Request>
+        <Response>
             <Step>
                 <Name>EchoVariables</Name>
             </Step>
-        </Request>
-        <Response/>
+        </Response>
     </PreFlow>
     <Flows/>
     <PostFlow name="PostFlow">

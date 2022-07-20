@@ -14,79 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-####################################
-### function: generate_edge_json ###
-####################################
-generate_edge_json() {
-  SCRIPTPATH="$( cd "$(dirname "$0")" || exit >/dev/null 2>&1 ; pwd -P )"
-
-  rm -f "$SCRIPTPATH"/edge.json
-  cat <<EOF >> "$SCRIPTPATH/edge.json"
-{
-    "version": "1.0",
-    "envConfig": {
-        "$APIGEE_X_ENV": {
-            "targetServers": [],
-            "virtualHosts": [],
-            "caches": [],
-            "kvms": []
-        }
-    },
-    "orgConfig": {
-        "apiProducts": [
-            {
-                "name": "Samples-APIProduct",
-                "apiResources": [],
-                "approvalType": "auto",
-                "attributes": [
-                    {
-                        "name": "access",
-                        "value": "public"
-                    }
-                ],
-                "description": "",
-                "displayName": "Samples APIProduct",
-                "environments": [
-                    "$APIGEE_X_ENV"
-                ],
-                "proxies": [
-                    "samples-traffic-enforce-quota-simple"
-                ]
-            }
-        ],
-        "developers": [
-            {
-                "email": "janedoe@example.com",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "userName": "janedoe",
-                "attributes": []
-            }
-        ],
-        "developerApps": {
-            "janedoe@example.com": [
-                {
-                    "name": "sampleApp",
-                    "attributes": [
-                        {
-                            "name": "displayName",
-                            "value": "Sample App"
-                        }
-                    ],
-                    "apiProducts": [
-                        "Samples-APIProduct"
-                    ],
-                    "callbackUrl": "https://httpbin.org/get",
-                    "scopes": []
-                }
-            ]
-        }
-    }
-}
-EOF
-}
-
-set -e
+set +e
 
 echo This script deploys all sample API proxies to your organization on the Apigee API Platform.
 
@@ -184,7 +112,7 @@ echo "Setting up an API Product, Developer and App"
 apigeecli developers create -n "janedoe@gmail.com" -f "Jane" -s "Doe" -u "janedoe"
 apigeecli products create -n "Samples API Product" -m "Samples API Product" -e "$APIGEE_X_ENV" -f auto --opgrp apiproduct.json -t $APIGEE_TOKEN
 apigeecli apps create -e "janedoe@gmail.com" -n "Sample App" -p "Samples API Product" -t $APIGEE_TOKEN
-
+apigeecli apps keys create -d "janedoe@gmail.com" -n "Sample App" -t $APIGEE_TOKEN -k "myAPIKey123" -r "myAPISecret123" -p "Samples API Product"
 
 echo "Login to apigee.google.com to view and interact with the sample API proxies"
 

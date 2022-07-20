@@ -1,7 +1,7 @@
 {
     "operationConfigs": [
           {
-            "apiSource": "samples-traffic-response-cache",
+            "apiSource": "samples-security-apikey-basic",
             "operations": [
               {
                 "resource": "/"
@@ -17,13 +17,25 @@
             ]
           },
           {
+            "apiSource": "samples-security-access-entity",
+            "operations": [
+              {
+                "resource": "/"
+              }
+            ]
+          },
+          {
             "apiSource": "samples-traffic-enforce-quota-key",
             "operations": [
               {
                 "resource": "/"
               }
             ],
-            "quota": {}
+            "quota": {
+              "limit": "3",
+              "interval": "10",
+              "timeUnit": "second"
+            }
           }
     ],
     "operationConfigType": "proxy"
