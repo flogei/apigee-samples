@@ -1,0 +1,20 @@
+<APIProxy revision="6" name="samples-mediation-oasvalidation">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1658751701806</CreatedAt>
+    <LastModifiedAt>1658751701806</LastModifiedAt>
+    <BasePaths>/apigee-samples/oasvalidation</BasePaths>
+    <Policies>
+        <Policy>OSV-SpecValidation</Policy>
+        <Policy>AM-RemovePath</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>oas://artist-spec.yaml</Resource>
+    </Resources>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
