@@ -1,1 +1,0 @@
-flow.setVariable("target.url", flow.getVariable("target.url") + "/" + flow.getVariable("dataStoreOrgName") + "/" + flow.getVariable("dataStoreAppName") + "/token");
