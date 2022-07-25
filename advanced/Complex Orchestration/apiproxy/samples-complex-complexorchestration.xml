@@ -1,0 +1,19 @@
+<APIProxy revision="9" name="KN-Mashup-API-v1">
+    <DisplayName>samples-complex-complexorchestration</DisplayName>
+    <Description></Description>
+    <CreatedAt>1658753260880</CreatedAt>
+    <LastModifiedAt>1658753260880</LastModifiedAt>
+    <BasePaths>/apigee-samples/complexorchestration</BasePaths>
+    <Policies>
+        <Policy>AM-SetResponse</Policy>
+        <Policy>AM-forwardPathFalse</Policy>
+        <Policy>SC-user</Policy>
+        <Policy>EV-ParseUserResponse</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

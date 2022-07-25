@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout continueOnError="false" enabled="true" name="SC-user">
+    <DisplayName>SC-user</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="userRequest">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>userCalloutResponse</Response>
+    <HTTPTargetConnection>
+        <URL>https://mocktarget.apigee.net/json</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

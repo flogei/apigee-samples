@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables continueOnError="false" enabled="true" name="EV-ParseUserResponse">
+    <DisplayName>EV-ParseUserResponse</DisplayName>
+    <Source>userCalloutResponse</Source>
+    <VariablePrefix>userresponse</VariablePrefix>
+    <JSONPayload>
+        <Variable name="firstname">
+            <JSONPath>$.firstName</JSONPath>
+        </Variable>
+        <Variable name="lastname">
+            <JSONPath>$.lastName</JSONPath>
+        </Variable>
+        <Variable name="city">
+            <JSONPath>$.city</JSONPath>
+        </Variable>
+        <Variable name="state">
+            <JSONPath>$.state</JSONPath>
+        </Variable>
+    </JSONPayload>
+</ExtractVariables>
