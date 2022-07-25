@@ -1,1 +1,0 @@
-context.setVariable("target.url", "http://maps.googleapis.com/maps/api/geocode/json?address="+context.getVariable("LOCATION.zip"));
