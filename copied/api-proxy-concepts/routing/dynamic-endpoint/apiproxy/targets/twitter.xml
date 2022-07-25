@@ -1,0 +1,5 @@
+<TargetEndpoint name="twitter">
+  <HTTPTargetConnection>
+    <URL>https://dev.twitter.com/rest/public</URL>
+  </HTTPTargetConnection>
+</TargetEndpoint>

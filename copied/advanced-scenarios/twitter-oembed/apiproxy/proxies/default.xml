@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description>Twitter timeline oEmbed proxy endpoint</Description>
+    <PreFlow>
+        <!-- Enable Cross Origin Resource Sharing access to this endpoint -->
+        <Response>
+            <Step>
+                <Name>cors</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <Flows>
+        <Flow name="GET-search">
+            <!-- Process the response from the resource with JavaScript step -->
+            <Response>
+                <Step>
+                    <Name>search-oembed</Name>
+                </Step>
+            </Response>
+            <!-- This flow is only triggered when the request path suffix (following the API façade URL)
+                 matches the resource path and when it's a GET request -->
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/search.json&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <!-- API façade URL -->
+        <BasePath>/twitter-oembed</BasePath>
+        <VirtualHost>default</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <!-- The default, and only, target is the Twitter API, defined in targets/default.xml -->
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>
