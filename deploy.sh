@@ -21,6 +21,7 @@ echo This script deploys all sample API proxies to your organization on the Apig
 echo Deploying all samples to $APIGEE_X_ENV and $APIGEE_X_ORG available under $APIGEE_X_HOSTNAME
 
 apiproxyArray=""
+apigeecli prefs set -o $APIGEE_X_ORG
 
 # Deploying Traffic Management Samples
 cd traffic-management/
@@ -109,7 +110,7 @@ echo "Deployment complete."
 
 echo "Setting up an API Product, Developer and App"
 
-apigeecli developers create -n "janedoe@gmail.com" -f "Jane" -s "Doe" -u "janedoe"
+apigeecli developers create -n "janedoe@gmail.com" -f "Jane" -s "Doe" -u "janedoe" 
 apigeecli products create -n "Samples API Product" -m "Samples API Product" -e "$APIGEE_X_ENV" -f auto --opgrp apiproduct.json -t $APIGEE_TOKEN
 apigeecli apps create -e "janedoe@gmail.com" -n "Sample App" -p "Samples API Product" -t $APIGEE_TOKEN
 apigeecli apps keys create -d "janedoe@gmail.com" -n "Sample App" -t $APIGEE_TOKEN -k "myAPIKey123" -r "myAPISecret123" -p "Samples API Product"
