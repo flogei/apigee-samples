@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageLogging name="LogToCloudLogging">
+    <CloudLogging>
+        <LogName>projects/{organization.name}/logs/ApigeeDemoLog</LogName>
+        <Message contentType="application/json">{
+            "organization": "{organization.name}",
+            "environment": "{environment.name}",
+            "apiProxy": "{apiproxy.name}",
+            "apiProxyRevision": "{apiproxy.revision}",
+            "apiProduct": "{apiproduct.name}",
+            "developerApp": "{apiproduct.name}",
+            "clientId": "{client_id}",
+            "developerId": "{developer.id}",
+            "requestUri": "{request.uri}",
+            "requestUrl": "{request.url}",
+            "verb": "{request.verb}",
+            "correlationId": "{messageid}",
+            "proxyRequestReceived": "{client.received.end.timestamp}",
+            "proxyResponseSent": "{client.sent.end.timestamp}",
+            "targetResponseReceived": "{target.received.end.timestamp}",
+            "targetRequestSent": "{target.sent.end.timestamp}",
+            "targetResponseCode": "{message.status.code}",
+            "proxyResponseCode": "{response.status.code}",
+            "messageResponseCode": "{message.status.code}",           
+            "clientReceived": "{client.received.start.timestamp}",
+            "clientSent": "{client.sent.start.timestamp}",
+            "reqestPayload": "{escapeJSON(request.content)}",
+            "responsePayload": "{escapeJSON(response.content)}",
+            "faultName": "{fault.name}",
+            "headers": {logVar.headers}
+        }</Message>
+        <Labels>
+            <Label>
+                <Key>LoggingTeam</Key>
+                <Value>The-A-Team</Value>
+            </Label>
+        </Labels>
+        <ResourceType>gce_instance</ResourceType>
+    </CloudLogging>
+</MessageLogging>

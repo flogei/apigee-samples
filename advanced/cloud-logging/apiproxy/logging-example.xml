@@ -1,0 +1,21 @@
+<APIProxy revision="42" name="logging-example">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1656170119311</CreatedAt>
+    <LastModifiedAt>1656170119311</LastModifiedAt>
+    <BasePaths>/logging-example</BasePaths>
+    <Policies>
+        <Policy>LogToCloudLogging</Policy>
+        <Policy>Spike-Arrest-1</Policy>
+        <Policy>JS-ExtractHeaders</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JS-ExtractHeaders.js</Resource>
+    </Resources>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
