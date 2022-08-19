@@ -110,10 +110,13 @@ echo "Deployment complete."
 
 echo "Setting up an API Product, Developer and App"
 
-apigeecli developers create -n "janedoe@gmail.com" -f "Jane" -s "Doe" -u "janedoe" 
+apigeecli kvms create -e "$APIGEE_X_ENV" -t $APIGEE_TOKEN -n "UGBackendSecrets"
+apigeecli kvms entries create -m "UGBackendSecrets" -k "Backend1" -l "foobar" -e "$APIGEE_X_ENV" -t $APIGEE_TOKEN
+apigeecli developers create -n "janedoe@gmail.com" -f "Jane" -s "Doe" -u "janedoe" -t $APIGEE_TOKEN
 apigeecli products create -n "Samples API Product" -m "Samples API Product" -e "$APIGEE_X_ENV" -f auto --opgrp apiproduct.json -t $APIGEE_TOKEN
 apigeecli apps create -e "janedoe@gmail.com" -n "Sample App" -p "Samples API Product" -t $APIGEE_TOKEN
-apigeecli apps keys create -d "janedoe@gmail.com" -n "Sample App" -t $APIGEE_TOKEN -k "myAPIKey123" -r "myAPISecret123" -p "Samples API Product"
+apigeecli apps keys create -
+d "janedoe@gmail.com" -n "Sample App" -t $APIGEE_TOKEN -k "myAPIKey123" -r "myAPISecret123" -p "Samples API Product"
 
 echo "Login to apigee.google.com to view and interact with the sample API proxies"
 
