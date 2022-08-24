@@ -114,9 +114,10 @@ echo "Deleting API Product, Developer and App"
 # sackmesser clean developer "janedoe@example.com" --googleapi -t "$APIGEE_TOKEN" -o "$APIGEE_X_ORG"
 # sackmesser clean app "janedoe@example.com" --googleapi -t "$APIGEE_TOKEN" -o "$APIGEE_X_ORG"
 
+apigeecli kvms delete -e "$APIGEE_X_ENV" -t $APIGEE_TOKEN -n "UGBackendSecrets"
 apigeecli apps delete -n "Sample App" -t $APIGEE_TOKEN -i $(apigeecli apps get -n "Sample App" | jq -r '.[]|.developerId')
-apigeecli products delete -n "Samples API Product"
-apigeecli developers delete -n "janedoe@gmail.com"
+apigeecli products delete -n "Samples API Product" -t $APIGEE_TOKEN 
+apigeecli developers delete -n "janedoe@gmail.com" -t $APIGEE_TOKEN 
 
 
 echo "Deletion complete."
