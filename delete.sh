@@ -27,7 +27,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Deploy with Apigeecli
         echo Deleting Proxy $proxydir
-        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-traffic-$proxydir -v -1
+        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-traffic-$proxydir
         apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-traffic-$proxydir 
         
         # Deploy with Sackmesser
@@ -46,7 +46,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Delete with Apigeecli
         echo Deleting Proxy $proxydir
-        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-security-$proxydir -v -1
+        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-security-$proxydir
         apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-security-$proxydir 
     fi
 done
@@ -60,7 +60,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Delete with Apigeecli
         echo Deleting Proxy $proxydir
-        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-advanced-$proxydir -v -1
+        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-advanced-$proxydir
         apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-advanced-$proxydir 
     fi
 done
@@ -74,7 +74,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Delete with Apigeecli
         echo Deleting Proxy $proxydir
-        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-concepts-$proxydir -v -1
+        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-concepts-$proxydir
         apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-concepts-$proxydir 
     fi
 done
@@ -88,7 +88,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Delete with Apigeecli
         echo Deleting Proxy $proxydir
-        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-extensions-$proxydir -v -1
+        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-extensions-$proxydir
         apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-extensions-$proxydir 
     fi
 done
@@ -102,7 +102,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Delete with Apigeecli
         echo Deleting Proxy $proxydir
-        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-mediation-$proxydir -v -1
+        apigeecli apis undeploy -e $APIGEE_X_ENV -n samples-mediation-$proxydir
         apigeecli apis delete -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-mediation-$proxydir 
     fi
 done
