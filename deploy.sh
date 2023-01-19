@@ -30,7 +30,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Deploy with Apigeecli
         echo Deploying Proxy $proxydir
-        apigeecli apis create bundle -p $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-traffic-$proxydir 
+        apigeecli apis create bundle -f $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-traffic-$proxydir 
                 
         # Deploy with Sackmesser
         # SCRIPTPATH=$( (cd "$(dirname "$0")" && pwd ))
@@ -48,7 +48,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Deploy with Apigeecli
         echo Deploying Proxy $proxydir
-        apigeecli apis create bundle -p $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-security-$proxydir 
+        apigeecli apis create bundle -f $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-security-$proxydir 
     fi
 done
 
@@ -61,7 +61,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Deploy with Apigeecli
         echo Deploying Proxy $proxydir
-        apigeecli apis create bundle -p $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-advanced-$proxydir 
+        apigeecli apis create bundle -f $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-advanced-$proxydir 
     fi
 done
 
@@ -74,7 +74,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Deploy with Apigeecli
         echo Deploying Proxy $proxydir
-        apigeecli apis create bundle -p $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-concepts-$proxydir 
+        apigeecli apis create bundle -f $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-concepts-$proxydir 
     fi
 done
 
@@ -87,7 +87,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Deploy with Apigeecli
         echo Deploying Proxy $proxydir
-        apigeecli apis create bundle -p $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-extensions-$proxydir 
+        apigeecli apis create bundle -f $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-extensions-$proxydir 
     fi
 done
 
@@ -100,7 +100,7 @@ for proxydir in *; do
     if [ -d "${proxydir}" ]; then
         # Deploy with Apigeecli
         echo Deploying Proxy $proxydir
-        apigeecli apis create bundle -p $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-mediation-$proxydir 
+        apigeecli apis create bundle -f $proxydir/apiproxy -o "$APIGEE_X_ORG" -t "$APIGEE_TOKEN" -n samples-mediation-$proxydir 
     fi
 done
 
